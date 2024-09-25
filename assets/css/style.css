@@ -15,6 +15,22 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-size: 1.6rem; /* Base font size for body */
+}
+
+.header {
+  font-size: 1.3rem !important; /* Increased font size for header */
+}
+
+.sitename {
+  font-size: 1.4rem; /* Increase this if needed */
+}
+
+/* #header {
+  font-weight: 300 !important;
+} */
+
 h3 .sitename {
   font-size: revert;
 }
@@ -28,8 +44,8 @@ body {
   color: white;
 }
 
-header {
-  /* margin-top: 20px; */
+/* header {
+  margin-top: 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -41,6 +57,31 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+} */
+
+.header {
+  --background-color: rgba(0, 0, 0, 0);
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.header .logo {
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 32px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
 }
 
 .logo {
@@ -236,13 +277,13 @@ span {
     margin-top: 4rem;
   }
 
-/* --------------------------------------------------------------------------
+  /* --------------------------------------------------------------------------
    in mobile screen it will animate the img it will glow */
- .home-img img {
-  animation: animate 1.5s ease-in-out infinite;
-  font-size: 1.8rem;
-  font-weight: 500;
-}
+  .home-img img {
+    animation: animate 1.5s ease-in-out infinite;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
 }
 
 /* .sitename {
@@ -271,3 +312,5 @@ span {
   scroll-margin-top: 100px; */
   overflow: clip;
 }
+
+
