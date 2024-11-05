@@ -4,12 +4,12 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Wing Wing Website (3W's)</title>
+    <title>Emmanuel Ampatin | Personal Website</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/favicon/prof3.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Fonts -->
@@ -53,7 +53,7 @@
           <ul>
             <li><a href="index.html" class="">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <!-- <li><a href="resume.html">Resume</a></li> -->
+            <li><a href="resume.html">Resume</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -87,10 +87,13 @@
       </div>
       <!-- End Page Title -->
 
-      <!-- Contact Section -->
+
+          <!-- Contact Section -->
       <section id="contact" class="contact section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
+
+      <br>    
+     <div class="row gy-4">
             <div class="col-md-6">
               <div
                 class="info-item d-flex align-items-center"
@@ -130,7 +133,7 @@
                 <i class="icon bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Me</h3>
-                  <p>emmanuelampatin119@gmail.com</p>
+                  <p>wing2goaway@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -158,101 +161,75 @@
             <!-- End Info Item -->
           </div>
 
-            <br><br>
-            <div class="container section-title" data-aos="fade-up">
-          <!-- <h2>Skills</h2> -->
-          <div class="text-center">
-            <span>My</span> <span class="description-title">LOCATION</span>
-          </div>
+   <!-- form section -->
+    <form
+    action="forms/contact.php"
+    id="send_message"
+    method="post"
+    class="php-email-form"
+    data-aos="fade-up"
+    data-aos-delay="600"
+>
+    <div class="row gy-4">
+        <div class="col-md-6">
+            <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Your Name"
+                required
+            />
         </div>
-          <div class="map">
-            <div class="row">
-              <div class="col-lg-6"><p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15769.949139615637!2d125.53275125318771!3d8.834141359512648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301c2b86b4bd9b9%3A0x90d1ff20a2a0981e!2sDulag%2C%20Butuan%20City%2C%20Agusan%20Del%20Norte!5e0!3m2!1sen!2sph!4v1727216872713!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p></div>
-              <div class="col-lg-6">
-                  <p>Dulag, located in the southern part of Butuan City, is a charming barangay that stands out for its peaceful and rural setting. The area is characterized by sprawling agricultural lands and an abundance of lush greenery, making it a refreshing contrast to the busier, more developed parts of the city. The barangay's tranquil environment is perfect for those who appreciate nature and a slower pace of life. The landscape is adorned with fields that stretch as far as the eye can see, often dotted with crops being cultivated by the local residents. Majestic mountain ranges form the backdrop, further enhancing the natural beauty of the area. The cool breezes that blow across the fields and the sounds of nature contribute to the serene atmosphere that Dulag offers.
 
-The community in Dulag is close-knit, with families who have lived in the area for generations. Many of these families are primarily engaged in farming and agricultural activities, making this barangay one of the key contributors to Butuan City’s agricultural output. Rice paddies, coconut plantations, and other crops are common sights, providing both sustenance and livelihood for the people. The simplicity of life in Dulag is appealing, especially for those looking to escape the fast-paced life in urban centers. There’s a timeless quality to the way of life here, where traditions are passed down, and the rhythm of daily life is closely tied to the land.</p>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-6">
+            <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            />
+        </div>
 
-           
+        <div class="col-md-12">
+            <input
+                type="text"
+                class="form-control"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+                required
+            />
+        </div>
 
+        <div class="col-md-12">
+            <textarea
+                class="form-control"
+                name="message"
+                id="message"
+                rows="6"
+                placeholder="Message"
+                required
+            ></textarea>
+        </div>
+
+        <div class="col-md-12 text-center">
+            <!-- Success and Error Alerts -->
+            <div id="successAlert" class="alert alert-success d-none mt-3" role="alert"></div>
+            <div id="errorAlert" class="alert alert-danger d-none mt-3" role="alert"></div>
+
+            <button type="submit" name="submitContact">Send Message</button>
+        </div>
+    </div>
+</form>
+
+          <!-- End Contact Form -->
     </div>
         </div>
       </section>
       <!-- /Contact Section -->
-
-
-      <!-- Faq Section -->
-    <section id="faq" class="faq section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="content px-xl-5">
-              <h3><span>Frequently Asked </span><strong style="color: #b74b4b;">Questions</strong></h3>
-              <p>
-                In this section, you will find answers to common inquiries
-                 regarding my services and how we can collaborate effectively. This section addresses key aspects such as what information to include in your inquiry, my preferred methods of communication, and my openness to long-term collaborations. Additionally, you'll find insights on how I handle project pricing and how quickly you can expect a response. 
-                If your questions aren't answered here, please don’t hesitate to reach out directly!
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="faq-container">
-              <div class="faq-item faq-active">
-                <h3><span class="num"></span> <span>1. What information should I include in my inquiry?</span></h3>
-                <div class="faq-content">
-                  <p>Please provide details about your project, including the scope, timeline, and any specific requirements. This helps me better understand your needs and offer the most relevant assistance.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num"></span> <span>2. What is your preferred method of communication?</span></h3>
-                <div class="faq-content">
-                  <p>Email is my preferred method of communication, but I’m open to phone or video calls depending on what works best for you.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num"></span> <span>3. Are you open to long-term collaborations?</span></h3>
-                <div class="faq-content">
-                  <p>Yes, I am open to both one-time projects and long-term collaborations. Feel free to reach out if you're looking for ongoing support.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num"></span> <span>4. How do you handle project pricing?</span></h3>
-                <div class="faq-content">
-                  <p>Project pricing varies depending on the complexity and scope. Once I understand your requirements, I’ll provide a detailed quote.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3><span class="num"></span> <span>5. How soon will I receive a response?</span></h3>
-                <div class="faq-content">
-                  <p>I aim to respond to all inquiries within 24-48 hours. For urgent matters, please mark the subject line as “Urgent.”</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
     </main>
 
 
@@ -260,7 +237,7 @@ The community in Dulag is close-knit, with families who have lived in the area f
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Emmanuel</strong> <span>All Rights Reserved</span></p>
+         <p><strong class="px-1 sitename">Emmanuel Ampatin</strong> <span>| Personal Website</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -273,7 +250,7 @@ The community in Dulag is close-knit, with families who have lived in the area f
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="#">Wing Wing</a>
+        <!-- Designed by <a href="#">Wing Wing</a> -->
       </div>
     </div>
   </footer>
@@ -304,6 +281,6 @@ The community in Dulag is close-knit, with families who have lived in the area f
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/main1.js"></script>
-    <!-- <script src="assets/js/contact11.js"></script> -->
+    <script src="assets/js/contact.js"></script>
   </body>
 </html>

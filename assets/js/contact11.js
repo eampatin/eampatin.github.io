@@ -12,7 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
       method: "POST",
       body: formData,
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then((data) => {
         if (data.status === "success") {
           successAlert.textContent = data.message;
@@ -20,11 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
           successAlert.classList.add("alert-success");
           errorAlert.classList.add("d-none");
 
-          // Hide the success alert after 5 seconds
           setTimeout(() => {
             successAlert.classList.add("d-none");
-            // Reset the form after submission
-            form.reset();
+            form.reset(); // Reset the form after submission
           }, 5000);
         } else {
           errorAlert.textContent = data.message;
@@ -32,21 +35,19 @@ document.addEventListener("DOMContentLoaded", function () {
           errorAlert.classList.add("alert-danger");
           successAlert.classList.add("d-none");
 
-          // Hide the error alert after 5 seconds
           setTimeout(() => {
             errorAlert.classList.add("d-none");
-            send_message.reset();
-          }, 3000);
+          }, 5000);
         }
       })
       .catch((error) => {
         console.error("Error:", error);
-        errorAlert.textContent = "An unexpected error occurred.";
+        errorAlert.textContent =
+          error.message || "Message not sent! Check console for more details.";
         errorAlert.classList.remove("d-none");
         errorAlert.classList.add("alert-danger");
         successAlert.classList.add("d-none");
 
-        // Hide the error alert after 5 seconds
         setTimeout(() => {
           errorAlert.classList.add("d-none");
         }, 5000);

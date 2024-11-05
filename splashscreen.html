@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Emmanuel Ampatin | Personal Website</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- font icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon/prof3.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="bg-black d-flex align-items-center justify-content-center vh-100"
+  >
+    <!-- Splash screen video container -->
+    <div
+      id="splash-screen"
+      class="d-flex align-items-center justify-content-center w-100 h-100"
+    >
+      <video id="splash-video" autoplay muted playsinline class="mw-100 mh-100">
+        <source src="/assets/video/wing wing.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <script>
+      // Event listener to hide splash screen and show content after the video ends
+      document
+        .getElementById("splash-video")
+        .addEventListener("ended", function () {
+          document.getElementById("splash-screen").style.display = "none";
+          document.getElementById("content").style.display = "flex"; // Show the main content
+        });
+
+      // Fallback to redirect to another page after 5 seconds if needed
+      setTimeout(function () {
+        window.location.href = "index.html";
+      }, 8000);
+    </script>
+  </body>
+</html>
