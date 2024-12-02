@@ -14,7 +14,7 @@ Frontend: HTML, CSS, JavaScript, Bootstrap
 Backend: PHP
 
 🔗 Live Demo
-Visit the live website here: eampatin.github.io
+Visit the live website here: https://eampatin.github.io/
 
 📞 Contact
 If you're interested in working together or have any questions, feel free to reach out!
